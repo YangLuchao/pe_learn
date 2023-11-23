@@ -1,0 +1,87 @@
+#include <resource.h>
+
+#define ICO_MAIN  1000
+#define DLG_MAIN  1000
+#define IDC_INFO  1001
+#define IDM_MAIN  2000
+#define IDM_OPEN  2001
+#define IDM_EXIT  2002
+
+
+#define IDM_1    4000
+#define IDM_2    4001
+#define IDM_3    4002
+#define IDM_4    4003
+
+#define RESULT_MODULE 5000
+#define ID_TEXT1  5001
+#define ID_TEXT2  5002
+#define IDC_MODULETABLE 5003
+#define IDC_OK 5004
+#define ID_STATIC 5005
+#define ID_STATIC1 5006
+#define IDC_BROWSE1 5007
+#define IDC_BROWSE2 5008
+#define IDC_LIST    5010
+#define IDC_MOVE1   5011
+#define IDC_MOVE2   5012
+#define IDC_MOVE3   5013
+#define IDC_MOVE4   5014
+#define IDC_MOVE5   5015
+#define IDC_MOVE6   5016
+
+
+ICO_MAIN  ICON  "bind.ico"
+
+DLG_MAIN DIALOG 50,50,544,399
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "PEÀ¦°óÆ÷ by qixiaorui"
+MENU IDM_MAIN
+FONT 9,"ËÎÌå"
+BEGIN
+   CONTROL "",IDC_INFO,"RichEdit20A",196 | ES_WANTRETURN | WS_CHILD | ES_READONLY
+               | WS_VISIBLE |WS_BORDER | WS_VSCROLL | WS_TABSTOP,0,0,540,396
+END
+
+RESULT_MODULE DIALOG 76,10,630,460
+STYLE DS_MODALFRAME | WS_POPUP |WS_VISIBLE | WS_CAPTION |WS_SYSMENU
+CAPTION "PEÀ¦°óÆ÷"
+FONT 9,"ËÎÌå"
+BEGIN
+  LTEXT "À¦°óÄ¿Â¼£º",ID_STATIC,10,13,200,15
+  EDITTEXT ID_TEXT1,130,13,440,15
+  PUSHBUTTON "ä¯ÀÀ...",IDC_BROWSE1,570,13,50,14
+
+  LTEXT "ËÞÖ÷³ÌÐò£º",ID_STATIC1,10,35,200,15
+  EDITTEXT ID_TEXT2,130,35,440,15
+  PUSHBUTTON "ä¯ÀÀ...",IDC_BROWSE2,570,35,50,14
+
+
+  LISTBOX IDC_LIST,10,60,610,110,LBS_STANDARD | LBS_SORT
+
+  PUSHBUTTON "   >>   ",IDC_MOVE1,10,170,50,14
+  PUSHBUTTON "  !>>   ",IDC_MOVE2,60,170,50,14
+  PUSHBUTTON "   >    ",IDC_MOVE3,110,170,50,14
+  PUSHBUTTON "  !>    ",IDC_MOVE4,160,170,50,14
+  PUSHBUTTON "   <    ",IDC_MOVE5,210,170,50,14
+  PUSHBUTTON "   <<   ",IDC_MOVE6,260,170,50,14
+
+
+  CONTROL "", IDC_MODULETABLE, "SysListView32",13 | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 10,190,610,240  
+
+  PUSHBUTTON "Ö´ÐÐÀ¦°ó...(&R)",IDC_OK,520,440,100,14
+END
+
+IDM_MAIN menu discardable
+BEGIN
+  POPUP "ÎÄ¼þ(&F)"
+  BEGIN
+    menuitem "1.´ýÀ¦°óµÄÄ¿Â¼(&O)...",IDM_OPEN
+    menuitem "2.ËÞÖ÷³ÌÐò(&P)...",IDM_1
+    menuitem "3.Ö´ÐÐÀ¦°ó...",IDM_2
+    menuitem separator
+    menuitem "ÍË³ö(&x)",IDM_EXIT
+  END
+
+END
+ 

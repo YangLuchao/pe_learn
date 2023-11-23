@@ -1,0 +1,16 @@
+LockTray_HelloWorld.exe   补丁程序为LockTray.exe,目标PE文件为HelloWorld
+patch_bind.exe            补丁程序为patch.exe,目标PE文件为bind
+patch_HelloWorld.exe      补丁程序为patch.exe,目标PE文件为HelloWorld
+patch_notepad.exe         补丁程序为patch.exe,目标PE文件为记事本notepad
+patch_explorer.exe        补丁程序为patch.exe,目标PE文件为系统资源管理器程序explorer
+
+
+
+bind.asm   为主程序
+bind1.asm  为改进后的主程序
+patch.asm  为补丁程序，在注册表的启动项中增加一项
+LockTray.asm 为补丁程序，可以锁定任务栏
+makeComFile.asm 生成指令与字节码的对应关系的小程序
+
+
+

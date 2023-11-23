@@ -1,0 +1,13 @@
+Microsoft (R) COFF Binary File Dumper Version 5.12.8078
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+
+
+Dump of file c:\windows\system32\notepad.exe
+
+File Type: EXECUTABLE IMAGE
+
+  Summary
+
+        2000 .data
+        8000 .rsrc
+        8000 .text

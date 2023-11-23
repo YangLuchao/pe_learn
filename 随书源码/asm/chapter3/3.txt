@@ -1,0 +1,10 @@
+-U 0140 014d
+13B7:0140 0E            PUSH	CS                                 
+13B7:0141 1F            POP	DS                                 
+13B7:0142 BA0E00        MOV	DX,000E                            
+13B7:0145 B409          MOV	AH,09                              
+13B7:0147 CD21          INT	21                                 
+13B7:0149 B8014C        MOV	AX,4C01                            
+13B7:014C CD21          INT	21                                 
+-q^C
+-
